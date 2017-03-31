@@ -1,0 +1,64 @@
+body{
+	margin: 0px;
+}
+#topinfo{
+	position: fixed;
+	z-index: 1;
+	top: 0px;
+	width: 100%;
+	height: 150px;
+	box-shadow: inset 0 100px 150px -50px;
+}
+#leftinfo{
+	display: inline;
+}
+
+#rightinfo{
+	float: right;
+	display: inline;
+}
+#leftinfo::before{
+	content: url("../img/Map-Location.png")
+}
+#rightinfo::before{
+	content: url("../img/Contact.png")
+}
+#centerinfo{
+	width: 1024px;
+	margin: 0 auto;
+	color: white;
+	text-shadow: 0 1px 10px black;
+	font-family: ptserif;
+	font-size: x-large;
+	margin-top: 50px;
+}
+
+.logo img{
+	height: 400px;
+	margin: 160px auto;
+	display: block;
+	vertical-align: middle;
+}
+.fotorama{
+	color: white;
+	min-width: 1024px;
+}
+
+.slidetext{
+	text-align: center;
+	margin-top: 210px;
+	text-shadow: 0 1px 10px black;
+}
+.divider{
+	height: 5px;
+	width: 150px;
+	background-color: #c19886;
+	margin: 0 auto;
+}
+.slidetext h1{
+	font-family: ptsans;
+}
+.slidetext p{
+	font-family: ptserif;
+	font-size: x-large;
+}
