@@ -2,7 +2,7 @@ body{
 	margin: 0px;
 }
 #topinfo{
-	position: fixed;
+	position: absolute;
 	z-index: 1;
 	top: 0px;
 	width: 100%;
@@ -11,11 +11,13 @@ body{
 }
 #leftinfo{
 	display: inline;
+	font-family: 'PT sans';
 }
 
 #rightinfo{
 	float: right;
 	display: inline;
+	font-family: 'PT sans';
 }
 #leftinfo::before{
 	content: url("../img/Map-Location.png")
@@ -56,9 +58,66 @@ body{
 	margin: 0 auto;
 }
 .slidetext h1{
-	font-family: ptsans;
+	font-family: 'PT serif';
 }
 .slidetext p{
-	font-family: ptserif;
+	font-family: 'Lobster', cursive;
 	font-size: x-large;
+	margin: 10px;
+}
+.middleinfo{
+	width: 1024px;
+	margin: 0px auto;
+	padding-top: 30px;
+}
+.mleftinfo{
+	width: 512px;
+	color: #444444;
+	display: inline-block;
+}
+.mleftinfo h2{
+	text-align: center;
+	font-family: 'PT serif';
+	margin: 10px;
+}
+.mleftinfo p{
+	font-family: 'PT sans';
+	text-indent: 2em;
+}
+.mleftinfo .divider{
+	width: 180px;
+}
+.mshadow{
+	-webkit-box-shadow: 0px 0px 50px 5px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 50px 5px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 50px 5px rgba(0,0,0,0.75);	
+}
+.mrightinfo{
+	padding: 0px;
+	width: 512px;
+	float: right;
+}
+.mrightinfo > div{
+	margin: 26px;
+}
+.blockpicture{
+	width: 228px;
+	height: 304px;
+	display: inline-block;
+	background-position: center;
+}
+.blockinfo{
+	display: inline-block;	
+}
+.cellinfo{
+	width: 252px;
+	display: inline-block;
+	height: 50px;
+	text-align: center;
+}
+.cellinfo > div{
+	display: inline-block;
+	font-family: 'PT sans';
+	font-size: x-large;
+	color: #444444;
 }
