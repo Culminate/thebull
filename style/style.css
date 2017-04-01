@@ -84,6 +84,7 @@ body{
 .mleftinfo p{
 	font-family: 'PT sans';
 	text-indent: 2em;
+	font-size: large;
 }
 .mleftinfo .divider{
 	width: 180px;
