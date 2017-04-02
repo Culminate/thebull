@@ -10,26 +10,37 @@
 	<title>The Bull Gastro Burgers & Craft Beer</title>
 
 	<!-- jQuery -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> <!-- 30 KB -->
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css"> <!-- 9 KB -->
 	<!-- jQuery UI  -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script> <!-- 67 KB -->
 
 	<!-- http://fotorama.io -->
 	<link  href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet"> <!-- 3 KB -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script> <!-- 16 KB -->
 
+	<!-- Yandex map API -->
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+
 	<link rel="icon" type="image/ico" href="img/favicon.ico">
 	<link  href="style/style.css" rel="stylesheet">
+	<link  href="style/modal.css" rel="stylesheet">
 
-	<link href="https://fonts.googleapis.com/css?family=Lobster|PT+Sans|PT+Serif" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lobster|PT+Sans|PT+Serif" rel="stylesheet"> <!-- 134 KB -->
+
+	<script src="script/script.js"></script>
+	<script src="script/modal.js"></script>
 </head>
 <body>
 <div>
+	<div id="modal">
+		<div id="map"></div>
+	</div>
+	<div id="overlay"></div>
 	<div id="topinfo">
 		<div id="centerinfo">
-			<div id="leftinfo">Адрес</div>
-			<div id="rightinfo">Номер почта</div>
+			<div id="leftinfo"><i></i> г.Уфа, ул. Ленина, д. 44/46<br><a id="showmodal" href="#">показать на карте</a></div>
+			<div id="rightinfo"><i></i> Номер почта</div>
 		</div>
 	</div>
 	<div class="fotorama"
@@ -42,7 +53,7 @@
 		data-transition="slide"
      	data-clicktransition="dissolve">
 		>
-		<div data-img="img/backgroundlogo.jpg" class="logo" >
+		<div data-img="img/backgroundlogo.jpg" data-thumb="backgroundlogothumb.jpg" class="logo" >
 			<img src="img/logo.png">
 		</div>
 		<div data-img="img/blud1.jpg" class="slidetext">
@@ -105,7 +116,7 @@
 			<table>
 				<tr>
 					<td>
-						<i id="postinfoadres"></i><p>Адрес</p>
+						<i id="postinfoadres"></i><p>г.Уфа, ул. Ленина, д. 44/46</p>
 					</td>
 					<td>
 						<i id="postinfotel"></i><p>Телефон</p>
@@ -119,7 +130,7 @@
 						<i id="postinfoclock"></i><p>Время</p>
 					</td>
 					<td>
-						<i id="postinfomail"></i><p>Почта</p>
+						<i id="postinfomail"></i><p>thebullbar2017@gmail.com</p>
 					</td>
 					<td>
 						
