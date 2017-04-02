@@ -152,32 +152,46 @@ body{
 }
 .postinfo{
 	background-color: #202020;
-	text-align: center;
 	min-width: 1024px;
+	font-family: 'PT sans';
+	font-size: medium;
+	color: white;
 }
+.postinfo:after {
+ content: "";
+ display: block;
+ clear: both;
+ }
 .postinfo > div{
-	min-width: 1024px;
 	max-width: 1280px;
 	margin: 0 auto;
 }
-.postinfo table{
-	width: 100%;
+.row{
+	position: relative;
+}
+.col{
+	margin: 0 0 0 30px;
+	position: relative;
+	width: 30%;
+	float: left;
+
 }
 .postinfo p{
-	font-family: 'PT sans';
-	font-size: large;
-	color: white;
-	margin: 10px auto;
-	margin-left: 10px;
 	display: inline-block;
+	margin: 10px 0 10px 30px;
 }
-.postinforight{
-	text-align: right;
+.postinfo a{
+	display: inline-block;
+	margin: 10px 0 10px 30px;
+	color: white;
 }
-.postinforight p{
-	margin-right: 50px;
+.postinfo a:hover{
+	text-decoration: none; 
 }
-
+.postinfo i:before{
+	position: absolute;
+	top: 12px;
+}
 #postinfoadres:before{
 	content: url(../img/Map-Location-16.png)
 }
@@ -192,4 +206,14 @@ body{
 }
 #postinfoshare:before{
 	content: url(../img/Share-03-16.png)
+}
+.ya-share2{
+	display: inline-block;
+	vertical-align: top;
+}
+.ya-share2__link{
+	margin: 0;
+}
+.ya-share2__item{
+	width: 30px;
 }

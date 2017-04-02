@@ -21,6 +21,10 @@
 
 	<!-- Yandex map API -->
 	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+	<!-- Yandex sharelinks -->
+	<script src="https://yastatic.net/share2/share.js" async="async"></script>
+	<!-- vk widget -->
+	<script type="text/javascript" src="https://vk.com/js/api/openapi.js?143"></script>
 
 	<link rel="icon" type="image/ico" href="img/favicon.ico">
 	<link  href="style/style.css" rel="stylesheet">
@@ -28,8 +32,8 @@
 
 	<link href="https://fonts.googleapis.com/css?family=Lobster|PT+Sans|PT+Serif" rel="stylesheet"> <!-- 134 KB -->
 
-	<script src="script/script.js"></script>
-	<script src="script/modal.js"></script>
+	<script type="text/javascript" src="script/script.js"></script>
+	<script type="text/javascript" src="script/modal.js"></script>
 </head>
 <body>
 <div>
@@ -40,7 +44,7 @@
 	<div id="topinfo">
 		<div id="centerinfo">
 			<div id="leftinfo"><i></i> г.Уфа, ул. Ленина, д. 44/46<br><a id="showmodal" href="#">показать на карте</a></div>
-			<div id="rightinfo"><i></i> Номер почта</div>
+			<div id="rightinfo"><i></i> +7 996 400 12 27</div>
 		</div>
 	</div>
 	<div class="fotorama"
@@ -113,32 +117,49 @@
 	</div>
 	<div class="postinfo">
 		<div>
-			<table>
-				<tr>
-					<td>
-						<i id="postinfoadres"></i><p>г.Уфа, ул. Ленина, д. 44/46</p>
-					</td>
-					<td>
-						<i id="postinfotel"></i><p>Телефон</p>
-					</td>
-					<td class="postinforight">
-						<i id="postinfoshare"></i><p>Поддержи нас</p>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<i id="postinfoclock"></i><p>Время</p>
-					</td>
-					<td>
-						<i id="postinfomail"></i><p>thebullbar2017@gmail.com</p>
-					</td>
-					<td>
-						
-					</td>
-				</tr>
-			</table>
+			<div class="col">
+				<div class="row">
+					<i id="postinfoadres"></i>
+					<p>г.Уфа, ул. Ленина, д. 44/46</p>
+				</div>
+				<div class="row">
+					<i id="postinfoclock"></i>
+					<p>Вс-Чт 15:00 до 24:00<br>Пт-Сб 15:00 до 01:00</p>
+				</div>
+			</div>
+			<div class="col">
+				<div class="row">
+					<i id="postinfotel"></i>
+					<p>+7 996 400 12 27</p>
+				</div>
+				<div class="row">
+					<i id="postinfomail"></i>
+					<a href="mailto:thebullbar2017@gmail.com">thebullbar2017@gmail.com</a>
+				</div>
+			</div>
+			<div class="col">
+				<div class="row">
+					<i id="postinfoshare"></i><p>Поддержи нас</p>
+					<div class="ya-share2" data-services="vkontakte,facebook,odnoklassniki,gplus,twitter" data-counter=""></div>
+				</div>
+				<div class="row">
+					<div id="vk_subscribe"></div>
+				</div>
+				<div class="row">
+					<div id="igwidget"><div id="igwlink"><a href="http://starsinstagram.ru" target="_blank"><img src="http://starsinstagram.ru/razrabotchiki_vidzheta.png" alt="Разработчики виджета инстаграм для сайта" title="Перейдя по этой ссылке вы попадете на сайт разработчика виджета инстаграм для сайта"></a></div><script id="igwscript" type="text/javascript" src="http://starsinstagram.ru/igw/igw_js3.php?name=https://www.instagram.com/the_bull_bar/" async></script></div>
+				</div>
+			</div>
 		</div>
 	</div>
-</div>
 </body>
 </html>
+<!--
+<i id="postinfoadres"></i>
+<p>г.Уфа, ул. Ленина, д. 44/46</p>
+<i id="postinfoclock"></i>
+<p>Вс-Чт 15:00 до 24:00;<br>Пт-Сб 15:00 до 01:00</p>
+<i id="postinfotel"></i><p>+7 996 400 12 27</p>
+<i id="postinfomail"></i><a href="mailto:thebullbar2017@gmail.com">thebullbar2017@gmail.com</a>
+<div class="ya-share2" data-services="vkontakte,facebook,odnoklassniki,gplus,twitter,viber,whatsapp,telegram" data-counter="">
+<i id="postinfoshare"></i><p>Поддержи нас</p>
+-->

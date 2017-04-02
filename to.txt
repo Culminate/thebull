@@ -1,2 +1,0 @@
-toserver.bat
-ex.txt
