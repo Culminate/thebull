@@ -1,4 +1,13 @@
-ymaps.ready(initdop);
+var check = false;
+$(window).on('scroll', function () {
+    var dopmap = $('#dopmap').offset().top;
+    if ( ($(this).scrollTop() + $(this).height() > dopmap) && !check ) {
+        check = true;
+        ymaps.ready(initdop);
+  }
+});
+
+
 
 function initdop () {
 
