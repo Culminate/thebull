@@ -4,7 +4,7 @@
 	<meta charset="utf-8" />
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<meta name="language" content="ru">
-	<meta name="keywords" content="бар, ресторан, бургерная, пиво, бургер, бутерброд">
+	<meta name="keywords" content="бар, ресторан, бургерная, салун, пиво, бургер, бутерброд, bull, thebull, saloon">
 	<meta name="description" content="The Bull Gastro Burgers & Craft Beer.">
 
 	<title>The Bull Gastro Burgers & Craft Beer</title>
@@ -67,7 +67,7 @@
 
 	</script>
 
-	<link rel="icon" type="image/ico" href="img/favicon.ico">
+	<link rel="icon" type="image/x-icon" href="img/favicon.ico">
 	<link  href="style/style.css" rel="stylesheet">
 	<link  href="style/modal.css" rel="stylesheet">
 
@@ -158,12 +158,15 @@
 		</div>
 	</div>
 	<div id="dopmap"></div>
-	<div class="postinfo">
+	<div itemscope itemtype="http://schema.org/Organization" class="postinfo">
 		<div>
 			<div class="col">
-				<div class="row">
+				<div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress" class="row">
 					<i id="postinfoadres"></i>
-					<p>г.Уфа, ул. Ленина, д. 44/46</p>
+					<p>
+					<span itemprop="addressLocality">г.Уфа</span>, 
+					<span itemprop="streetAddress">ул. Ленина, 44/46</span>
+					</p>
 				</div>
 				<div class="row">
 					<i id="postinfoclock"></i>
@@ -173,7 +176,7 @@
 			<div class="col">
 				<div class="row">
 					<i id="postinfotel"></i>
-					<p>+7 996 400 12 27</p>
+					<p itemprop="telephone">+7 996 400 12 27</p>
 				</div>
 				<div class="row">
 					<i id="postinfomail"></i>
