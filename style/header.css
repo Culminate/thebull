@@ -1,0 +1,55 @@
+header{
+	position: absolute;
+	z-index: 1;
+	width: 100%;
+	min-width: 480px;
+	background: linear-gradient(to bottom, rgba(0, 0, 0, .8), rgba(0, 0, 0, 0));
+}
+header .row{
+	margin: 50px 0;
+}
+header .address{
+	padding-left: 0;
+}
+header #maphref{
+	width: 200px;
+	text-align: right;
+}
+header a{
+	color: white;
+}
+header a:hover{
+	color: #c19886;
+}
+header a:focus{
+	color: white !important;
+	text-decoration: none;
+}
+header i.fa{
+	color: #c19886;
+}
+header p{
+	display: inline-block;
+	margin-left: 15px;
+	font-size: large;
+	font-family: "PT Sans";
+	color: #dddddd;
+}
+
+header .social{
+	padding: 0;
+	text-align: right;
+}
+.social .subsocial{
+	display: inline-block;
+	width: 116px;
+	padding: 3px 5px;
+	border: 2px solid #c19886;
+	border-radius: 15px;
+	text-align: center;
+	margin: 5px;
+}
+.social p{
+	margin: 0 0 0 5px;
+	font-size: medium;
+}

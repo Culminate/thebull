@@ -1,0 +1,23 @@
+footer{
+	background-color: #333;
+	color: #ddd;
+	padding: 30px;
+}
+footer p{
+	display: inline-block;
+	margin-left: 5px;
+
+}
+.divtime{
+	display: inline-block;
+}
+footer .icon{
+	width: 20px;
+	height: 20px;
+	text-align: center;
+	display: inline-block;
+	vertical-align: top;
+}
+footer .container>.row{
+	text-align: center;
+}
