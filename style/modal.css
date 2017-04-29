@@ -1,0 +1,17 @@
+#overlay{
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0, 0 , 0, 0.8);
+	z-index: 3;
+	display: none;
+}
+#modal{
+	position: fixed;
+	height: 80%;
+	width: 80%;
+	margin: 0 10%; 
+	z-index: 4;
+	display: none;
+	background-color: #DDD;
+}

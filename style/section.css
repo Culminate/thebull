@@ -24,6 +24,12 @@ main section{
 	background-size: cover;
 }
 
+@media (max-width: 992px){ 
+main section{
+	height: 250px;
+}
+}
+
 .burgertext>div{
 	display: block;
 	position: relative;
@@ -36,7 +42,6 @@ main section{
 	margin: 0 0 0 10px;
 }
 .burgerconsist{
-	font-size: small;
 	text-indent: 10px;
 }
 .burgerprice{
