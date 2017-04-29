@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>The Bull Бургерная в г.Уфа</title>
+	<title>The Bull Бургерная Уфа</title>
 	<meta charset="utf-8" />
 	<meta name="language" content="ru">
 	<meta name="keywords" content="бар, ресторан, бургерная, салун, пиво, пивная, бургер, бутерброд, bull, thebull, saloon">
@@ -10,7 +10,8 @@
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="js/load.js"></script>
-	<script src="js/yamap.js"></script>
+	<script src="js/modal.js"></script>
+	<script src="js/device.min.js"></script>
 	
 	<link rel="stylesheet" href="style/main.css">
 	<link rel="stylesheet" href="style/slider.css">
@@ -18,24 +19,29 @@
 	<link rel="stylesheet" href="style/section.css">
 	<link rel="stylesheet" href="style/article.css">
 	<link rel="stylesheet" href="style/footer.css">
+	<link rel="stylesheet" href="style/modal.css">
 	<link href="https://fonts.googleapis.com/css?family=Lobster|PT+Sans|PT+Serif" rel="stylesheet"> <!-- 134 KB -->
 </head>
 <body>
+	<div id="modal">
+		<div id="map"></div>
+	</div>
+	<div id="overlay"></div>
 	<header>
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-4 col-xs-6 address">
-					<i class="fa fa-phone fa-lg"></i><p>+7 996 400 12 27</p><br>
+					<i class="fa fa-phone fa-lg"></i><a href="tel:+79964001227"><p>+7 996 400 12 27</p></a><br>
 					<i class="fa fa-map-marker fa-lg"></i><p>Уфа, ул. Ленина, 44/46</p><br>
-					<div id="maphref"><a href="#">показать на карте</a></div>
+					<div class="maphref"><a href="geo:54.7286255,55.9493055?q=54.7286255,55.9493055(TheBull)">показать на карте</a></div>
 				</div>
 				<div class="col-sm-5 col-sm-offset-3 col-xs-6 social">
-					<a href="https://vk.com/thebullufa">
+					<a href="https://vk.com/thebullufa" target="_blank">
 						<div class="subsocial">
 							<i class="fa fa-vk fa-lg"></i><p>вконтакте</p>
 						</div>
 					</a>
-					<a href="https://www.instagram.com/the_bull_bar/">
+					<a href="https://www.instagram.com/the_bull_bar/" target="_blank">
 						<div class="subsocial">
 							<i class="fa fa-instagram fa-lg"></i><p>инстаграм</p>
 						</div>
@@ -75,15 +81,16 @@
 	</div>
 	<main class="container">
 		<div class="row">
-			<article class="col-sm-7 col-md-8">
+			<article class="col-md-8">
 				<div>
 					<p><span class="thebullcaption">The Bull</span> - это бургерная, которая окунет вас в мир дикого запада, отлчиных американских бургеров и хорошей музыки.</p>
-					<img src="pic/main/inter.jpg" alt="TheBull интерьер">
-					<p>Мы находимся в удобном месте на улице Ленина, 44/46</p>
-					<div id="yamap"></div>
+					<img src="pic/main/inter1.jpg" alt="TheBull интерьер">
+					<p>Большой ассортимент алкогольных напитков, не разочарует вас</p>
+					<img src="pic/main/inter2.jpg" alt="Thebull алкоголь">
+					<p>Мы находимся в удобном месте на <a class="maphref" href="geo:54.7286255,55.9493055?q=54.7286255,55.9493055(TheBull)">улице Ленина, 44/46</a>, около кинотеатра Родина</p>
 				</div>
 			</article>
-			<aside class="col-sm-5 col-md-4">
+			<aside class="col-md-4">
 				<section  style="background-image: url(pic/burgers/burger1.jpg);">
 					<div class="burgerpic"></div>
 					<div class="burgertext">
@@ -150,7 +157,7 @@
 						<div>
 						<p class="burgername">BFG</p>
 						<p class="burgerprice"><i class="fa fa-rub"></i> 1000</p>
-						<p class="burgerconsist">Черная булочка, 5 котлет из мраморной говядины, 5 слоев сыра чеддер, 5 слоев бекона, соус барбекю. Подается с картофельными дольками, соусом и безалкогольным напитком. 950г</p>
+						<p class="burgerconsist">Черная булочка, 5 котлет из мраморной говядины, 5 слоев сыра чеддер, 5 слоев бекона, соус барбекю. Подается с картофельными дольками, соусом и напитком. 950г</p>
 						</div>
 					</div>
 				</section>

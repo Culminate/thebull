@@ -11,7 +11,7 @@ header .row{
 header .address{
 	padding-left: 0;
 }
-header #maphref{
+header .maphref{
 	width: 200px;
 	text-align: right;
 }

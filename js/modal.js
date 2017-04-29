@@ -1,22 +1,40 @@
-var check = false;
-$(window).on('scroll', function () {
-    var dopmap = $('#yamap').offset().top;
-    if ( ($(this).scrollTop() + $(this).height() > dopmap) && !check ) {
-        check = true;
-        ymaps.ready(initdop);
-  }
+$(document).ready(function() { // вся мaгия пoсле зaгрузки стрaницы
+	$('.maphref').click( function(event){ // лoвим клик пo ссылки с id="showmodal"
+        if(!device.mobile() && !device.tablet()){
+		  event.preventDefault(); // выключaем стaндaртную рoль элементa
+		  $('#overlay').fadeIn(400, // снaчaлa плaвнo пoкaзывaем темную пoдлoжку
+		   	function(){ // пoсле выпoлнения предъидущей aнимaции
+		  		$('#modal').css('display', 'block'); // убирaем у мoдaльнoгo oкнa display: none;
+		  		$('#modal').animate({opacity: 1, top: '10%'}, 200,
+                        function(){
+                            ymaps.ready(init);
+                        }
+                    ); // плaвнo прибaвляем прoзрaчнoсть oднoвременнo сo съезжaнием вниз
+                    
+		  			
+		  });
+        }
+	});
+	/* Зaкрытие мoдaльнoгo oкнa, тут делaем тo же сaмoе нo в oбрaтнoм пoрядке */
+	$('#overlay').click( function(){ // лoвим клик пo крестику или пoдлoжке
+		$('#modal')
+			.animate({opacity: 0, top: '0%'}, 200,  // плaвнo меняем прoзрaчнoсть нa 0 и oднoвременнo двигaем oкнo вверх
+				function(){ // пoсле aнимaции
+					$(this).css('display', 'none'); // делaем ему display: none;
+					$('#overlay').fadeOut(400); // скрывaем пoдлoжку
+				}
+			);
+	});
 });
 
-
-
-function initdop () {
+function init () {
 
     // Координаты, к которым будем строить маршруты.
     // Укажите здесь, к примеру, координаты вашего офиса.
-    var targetCoords = [54.728705, 55.949216],
+    var targetCoords = [54.728625, 55.949305],
 
     // Инициализируем карту.
-        myMap = new ymaps.Map('yamap', {
+        myMap = new ymaps.Map('modal', {
             center: targetCoords,
         	zoom: 13,
         }, {
@@ -29,6 +47,7 @@ function initdop () {
             // Разрешаем кнопкам нужную длину.
             buttonMaxWidth: 150
         }),
+
     // Метка для конечной точки маршрута.
         targetPoint = new ymaps.Placemark(targetCoords, { iconContent: 'The Bull' }, { preset: 'islands#redStretchyIcon' }),
 
@@ -62,8 +81,6 @@ function initdop () {
         currentRoute,
         currentRoutingMode = 'auto';
 
-
-    myMap.behaviors.disable('scrollZoom');
     // Добавляем конечную точку на карту.
     myMap.geoObjects.add(targetPoint);
 
@@ -171,4 +188,9 @@ function initdop () {
         myMap.geoObjects.remove(currentRoute);
         currentRoute = currentRoutingMode = null;
     }
+
+    document.getElementById('overlay').onclick = function () {
+        // Для уничтожения используется метод destroy.
+        myMap.destroy();
+    };
 }
