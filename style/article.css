@@ -1,0 +1,17 @@
+.thebullcaption{
+	font-family: "Lobster";
+	font-size: x-large;
+}
+main article p{
+	font-size: large;
+	margin-top: 15px;
+}
+main article>div{
+	margin: 30px;
+}
+main article img{
+	width: 100%;
+}
+#yamap{
+	height: 500px;
+}

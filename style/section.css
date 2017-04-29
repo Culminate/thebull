@@ -1,0 +1,44 @@
+main.container{
+	overflow: hidden;
+	padding: 0;
+}
+main section, main section>div{
+	display: flex;
+}
+
+.burgerpic{
+	flex: 0 0 20%;
+	transition: all 0.5s ease;
+}
+.burgertext{
+	flex: 0 0 80%;
+	background-color: rgba(0, 0 , 0 , 0.8);
+	color: #ddd;
+}
+main section:hover .burgerpic{
+	flex: 0 0 100%;
+}
+main section{
+	height: 180px;
+	background-position: center;
+	background-size: cover;
+}
+
+.burgertext>div{
+	display: block;
+	position: relative;
+	padding: 10px 10px;
+	overflow: hidden;
+}
+.burgername{
+	font-family: "Lobster";
+	font-size: large;
+	margin: 0 0 0 10px;
+}
+.burgerconsist{
+	font-size: small;
+	text-indent: 10px;
+}
+.burgerprice{
+	margin: 0 0 0 10px;
+}

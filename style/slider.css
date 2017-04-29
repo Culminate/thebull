@@ -1,0 +1,31 @@
+.slider{
+	padding: 0 !important;
+	color: white;
+	position: relative;
+}
+.fotorama{
+	position: relative;
+}
+.logo img{
+	height: 480px;
+	margin: 60px auto;
+}
+.slide{
+	text-align: center;
+	margin-top: 210px;
+	text-shadow: 0 1px 10px black;
+}
+.divider{
+	height: 5px;
+	width: 150px;
+	background-color: #c19886;
+	margin: 0 auto;
+}
+.slide h1{
+	font-family: 'PT serif';
+}
+.slide p{
+	font-family: 'Lobster', cursive;
+	font-size: x-large;
+	margin: 10px;
+}

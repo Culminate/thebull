@@ -1,201 +1,189 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<title>The Bull Бургерная в г.Уфа</title>
 	<meta charset="utf-8" />
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<meta name="language" content="ru">
-	<meta name="keywords" content="бар, ресторан, бургерная, салун, пиво, бургер, бутерброд, bull, thebull, saloon">
-	<meta name="description" content="The Bull Gastro Burgers & Craft Beer.">
+	<meta name="keywords" content="бар, ресторан, бургерная, салун, пиво, пивная, бургер, бутерброд, bull, thebull, saloon">
+	<meta name="description" content="The Bull Бургерная Уфа">
+	<meta name="viewport" content="width=device-width, initial-scale=0.65, user-scalable=yes">
 
-	<title>The Bull Gastro Burgers & Craft Beer</title>
-
-	<!-- jQuery -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> <!-- 30 KB -->
-	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css"> <!-- 9 KB -->
-	<!-- jQuery UI  -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script> <!-- 67 KB -->
-
-	<!-- http://fotorama.io -->
-	<link  href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet"> <!-- 3 KB -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script> <!-- 16 KB -->
-
-	<!-- Yandex map API -->
-	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
-	<!-- Yandex sharelinks -->
-	<script src="https://yastatic.net/share2/share.js" async="async"></script>
-	<!-- vk widget -->
-	<script type="text/javascript" src="https://vk.com/js/api/openapi.js?143"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="js/load.js"></script>
+	<script src="js/yamap.js"></script>
 	
-	<!-- Yandex.Metrika counter -->
-	<script type="text/javascript">
-	    (function (d, w, c) {
-	        (w[c] = w[c] || []).push(function() {
-	            try {
-	                w.yaCounter44373883 = new Ya.Metrika({
-	                    id:44373883,
-	                    clickmap:true,
-	                    trackLinks:true,
-	                    accurateTrackBounce:true,
-	                    webvisor:true
-	                });
-	            } catch(e) { }
-	        });
-	
-	        var n = d.getElementsByTagName("script")[0],
-	            s = d.createElement("script"),
-	            f = function () { n.parentNode.insertBefore(s, n); };
-	        s.type = "text/javascript";
-	        s.async = true;
-	        s.src = "https://mc.yandex.ru/metrika/watch.js";
-	
-	        if (w.opera == "[object Opera]") {
-	            d.addEventListener("DOMContentLoaded", f, false);
-	        } else { f(); }
-	    })(document, window, "yandex_metrika_callbacks");
-	</script>
-	<noscript><div><img src="https://mc.yandex.ru/watch/44373883" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-	<!-- /Yandex.Metrika counter -->
-	
-	<script>
-  	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	
-  	ga('create', 'UA-97886195-1', 'auto');
-  	ga('send', 'pageview');
-
-	</script>
-
-	<link rel="icon" type="image/x-icon" href="img/favicon.ico">
-	<link  href="style/style.css" rel="stylesheet">
-	<link  href="style/modal.css" rel="stylesheet">
-
+	<link rel="stylesheet" href="style/main.css">
+	<link rel="stylesheet" href="style/slider.css">
+	<link rel="stylesheet" href="style/header.css">
+	<link rel="stylesheet" href="style/section.css">
+	<link rel="stylesheet" href="style/article.css">
+	<link rel="stylesheet" href="style/footer.css">
 	<link href="https://fonts.googleapis.com/css?family=Lobster|PT+Sans|PT+Serif" rel="stylesheet"> <!-- 134 KB -->
-
-	<script type="text/javascript" src="script/script.js"></script>
-	<script type="text/javascript" src="script/modal.js"></script>
-	<script type="text/javascript" src="script/dopmap.js"></script>
 </head>
 <body>
-<div>
-	<div id="modal">
-		<div id="map"></div>
-	</div>
-	<div id="overlay"></div>
-	<div id="topinfo">
-		<div id="centerinfo">
-			<div id="leftinfo"><i></i> г.Уфа, ул. Ленина, д. 44/46<br><a id="showmodal" href="#">показать на карте</a></div>
-			<div id="rightinfo"><i></i> +7 996 400 12 27</div>
+	<header>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-4 col-xs-6 address">
+					<i class="fa fa-phone fa-lg"></i><p>+7 996 400 12 27</p><br>
+					<i class="fa fa-map-marker fa-lg"></i><p>Уфа, ул. Ленина, 44/46</p><br>
+					<div id="maphref"><a href="#">показать на карте</a></div>
+				</div>
+				<div class="col-sm-5 col-sm-offset-3 col-xs-6 social">
+					<a href="https://vk.com/thebullufa">
+						<div class="subsocial">
+							<i class="fa fa-vk fa-lg"></i><p>вконтакте</p>
+						</div>
+					</a>
+					<a href="https://www.instagram.com/the_bull_bar/">
+						<div class="subsocial">
+							<i class="fa fa-instagram fa-lg"></i><p>инстаграм</p>
+						</div>
+					</a>
+				</div>
+			</div>
 		</div>
-	</div>
-	<div class="fotorama"
-		data-fit="cover"
-		data-width="100%"
-		data-height="720"
-		data-loop="true"
-		data-autoplay="5000"
-		data-nav="false"
-		data-transition="slide"
-     	data-clicktransition="dissolve">
-		>
-		<div data-img="img/slide/backgroundlogo.jpg" data-thumb="img/slide/backgroundlogothumb.jpg" class="logo" >
-			<img src="img/logo.png">
-		</div>
-		<div data-img="img/slide/blud2.jpg" class="slidetext">
-			<p>The Bull</p>
-			<div class="divider"></div>
-			<h1>БУРГЕРЫ НА ВСЕ СЛУЧАИ ЖИЗНИ</h1>
-			<div class="divider"></div>
-			<p>Burgers & Craft Beer</p>
-		</div>
-		<div data-img="img/slide/blud1.jpg" class="slidetext">
-			<p>The Bull</p>
-			<div class="divider"></div>
-			<h1>ОРИГИНАЛЬНОЕ КРАФТОВОЕ ПИВО</h1>
-			<div class="divider"></div>
-			<p>Burgers & Craft Beer</p>
-		</div>
-	</div>
-	<div class="mshadow"></div>
-	<div class=middleinfo>
-		<div class="mrightinfo">
-			<div>
-				<div class="blockpicture" style="background-image: url(img/blockpic1.jpg)"></div>
-				<div class="blockpicture" style="background-image: url(img/blockpic2.jpg)"></div>
-				<div class="blockpicture" style="background-image: url(img/blockpic3.jpg)"></div>
-				<div class="blockpicture" style="background-image: url(img/blockpic4.jpg)"></div>
-			</div>	
-		</div>
-		
-		<div class="mleftinfo">
-			<div class="divider"></div>
-			<h2>О ЗАВЕДЕНИИ</h2>
-			<div class="divider"></div>
-			<p>Пиво — один из древнейших напитков, известный с эпохи неолита вместе с мёдом, квасом и вином. По некоторому радикальному мнению, выращивание зерновых началось именно ради пива, а не хлеба.</p>
-
-			<p>Химические остатки пива, датированные 3500—3100 годами до н. э., были найдены в Годин-Тепе в горах Загрос (западный Иран). Более поздние следы пива обнаружены в древнем Шумере, затем Египте и Ассирии. Пиво упоминается в древнеегипетских и месопотамских источниках. Строители египетских пирамид получали, помимо пищевого довольствия, пиво. Уже на древнейших шумерских глиняных табличках встречается гимн богине-покровительнице пивоварения Нинкаси, в котором содержится рецепт приготовления этого напитка; пиво упоминается в законах Хаммурапи. В архиве древнесирийского города Эбла упоминается, что эблаиты варили разнообразные сорта пива.</p>
-
-			<p>Пиво имело распространение во всём древнем мире, в частности в Древней Греции — приблизительно после 700 г. до н. э. Одно из самых ранних письменных упоминаний о пиве встречается у Ксенофонта (V век до н. э.). Побывав в одной из деревень Древней Армении, он писал:</p>
-
-			<p>Там хранились также пшеница, ячмень, овощи и ячменное вино в кратерах. В уровень с краями сосудов в вине плавал ячмень и в него воткнут был тростник больших и малых размеров, но без коленцев; кто хотел пить, должен был взять тростник в рот и тянуть через него вино. Не смешанное с водой вино было очень крепким, но для людей привычных это был очень приятный напиток.</p>
-			
-			<p>В Древней Армении пиво обычно готовили из ячменя, отсюда и название напитка − гаре́джур (арм. գարեջուր, то есть «ячменная вода»).</p>
-
-		</div>
-	</div>
-	<div class="blockinfo">
-		<div class="tableinfo">
-			<div class="cellinfo">
-				<img src="img/Snack-Burger.png"><div>Жри до упаду</div>
-			</div><div class="cellinfo">
-				<img src="img/Clock.png"><div>Работаем долго</div>
-			</div><div class="cellinfo">
-				<img src="img/Map-Location-32.png"><div>Быстро доехать</div>
-			</div><div class="cellinfo">
-				<img src="img/Juice.png"><div>Бухать до утра</div>
+	</header>
+	<div class="container-fluid slider">
+		<div class="fotorama"
+					data-fit="cover"
+					data-width="100%"
+					data-height="600"
+					data-loop="true"
+					data-autoplay="5000"
+					data-nav="false"
+					data-transition="slide"
+    	 			data-clicktransition="dissolve">
+			<div class="logo" data-img="pic/slide/backgroundlogo.jpg">
+				<img src="pic/logo.png" alt="Thebull Ufa logo" class="img-responsive">
+			</div>
+			<div class="slide" data-img="pic/slide/blud2.jpg">
+				<p>The Bull</p>
+				<div class="divider"></div>
+				<h1>БУРГЕРЫ НА ВСЕ СЛУЧАИ ЖИЗНИ</h1>
+				<div class="divider"></div>
+				<p>Burgers & Craft Beer</p>
+			</div>
+			<div class="slide" data-img="pic/slide/SlidePivo.jpg">
+				<p>The Bull</p>
+				<div class="divider"></div>
+				<h1>ОРИГИНАЛЬНОЕ КРАФТОВОЕ ПИВО</h1>
+				<div class="divider"></div>
+				<p>Burgers & Craft Beer</p>
 			</div>
 		</div>
 	</div>
-	<div id="dopmap"></div>
-	<div itemscope itemtype="http://schema.org/Organization" class="postinfo">
-		<div>
-			<div class="col">
-				<div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress" class="row">
-					<i id="postinfoadres"></i>
-					<p>
-					<span itemprop="addressLocality">г.Уфа</span>, 
-					<span itemprop="streetAddress">ул. Ленина, 44/46</span>
-					</p>
+	<main class="container">
+		<div class="row">
+			<article class="col-sm-7 col-md-8">
+				<div>
+					<p><span class="thebullcaption">The Bull</span> - это бургерная, которая окунет вас в мир дикого запада, отлчиных американских бургеров и хорошей музыки.</p>
+					<img src="pic/main/inter.jpg" alt="TheBull интерьер">
+					<p>Мы находимся в удобном месте на улице Ленина, 44/46</p>
+					<div id="yamap"></div>
 				</div>
-				<div class="row">
-					<i id="postinfoclock"></i>
-					<p>Вс-Чт 15:00 до 24:00<br>Пт-Сб 15:00 до 01:00</p>
+			</article>
+			<aside class="col-sm-5 col-md-4">
+				<section  style="background-image: url(pic/burgers/burger1.jpg);">
+					<div class="burgerpic"></div>
+					<div class="burgertext">
+						<div>
+						<p class="burgername">John Junior</p>
+						<p class="burgerprice"><i class="fa fa-rub"></i> 270</p>
+						<p class="burgerconsist">Черная булочка, котлета из мраморной говядины, сыр чеддер, яйцо, луковые кольца, соус домашний барбекю. 360г </p>
+						</div>
+					</div>
+				</section>
+				<section  style="background-image: url(pic/burgers/burger2.jpg);">
+					<div class="burgerpic"></div>
+					<div class="burgertext">
+						<div>
+						<p class="burgername">Hawaii</p>
+						<p class="burgerprice"><i class="fa fa-rub"></i> 320</p>
+						<p class="burgerconsist">Светлая булочка с кунжутом, котлета из мраморной говядины, домашний майонез, сыр чеддер, ананас, салат айсберг, помидор, маринованный лук, соус терияки. 360г</p>
+						</div>
+					</div>
+				</section>
+				<section  style="background-image: url(pic/burgers/burger3.jpg);">
+					<div class="burgerpic"></div>
+					<div class="burgertext">
+						<div>
+						<p class="burgername">Грибной Сэм</p>
+						<p class="burgerprice"><i class="fa fa-rub"></i> 270</p>
+						<p class="burgerconsist">Черная булочка, котлета с мраморной говядины, салат, томат, сыр чеддар, грибной соус, соус барбекю. 340г</p>
+						</div>
+					</div>
+				</section>
+				<section  style="background-image: url(pic/burgers/burger4.jpg);">
+					<div class="burgerpic"></div>
+					<div class="burgertext">
+						<div>
+						<p class="burgername">Oliver</p>
+						<p class="burgerprice"><i class="fa fa-rub"></i> 200</p>
+						<p class="burgerconsist">Черная булочка, котлета из мраморной говядины, сыр чеддер, салат руккола, маринованный редис, карамелизированный лук. 250г</p>
+						</div>
+					</div>
+				</section>
+				<section  style="background-image: url(pic/burgers/burger5.jpg);">
+					<div class="burgerpic"></div>
+					<div class="burgertext">
+						<div>
+						<p class="burgername">Classic Cheese</p>
+						<p class="burgerprice"><i class="fa fa-rub"></i> 250</p>
+						<p class="burgerconsist">Булочка с кунжутом, котлета из мраморной говядины, салат айсберг, сыр чеддер, помидор, маринованный лук, луковый джем или соус барбекю(на выбор). 320г</p>
+						</div>
+					</div>
+				</section>
+				<section  style="background-image: url(pic/burgers/burger6.jpg);">
+					<div class="burgerpic"></div>
+					<div class="burgertext">
+						<div>
+						<p class="burgername">Farmer John </p>
+						<p class="burgerprice"><i class="fa fa-rub"></i> 420</p>
+						<p class="burgerconsist">Булочка с кунжутом, 2 котлеты из мраморной говядины, луковые кольца, картофель по деревенски, сыр чеддер, бекон, руккола, петрушка, домашний томатный соус и соус барбекю. 480г</p>
+						</div>
+					</div>
+				</section>
+				<section  style="background-image: url(pic/burgers/burger7.jpg);">
+					<div class="burgerpic"></div>
+					<div class="burgertext">
+						<div>
+						<p class="burgername">BFG</p>
+						<p class="burgerprice"><i class="fa fa-rub"></i> 1000</p>
+						<p class="burgerconsist">Черная булочка, 5 котлет из мраморной говядины, 5 слоев сыра чеддер, 5 слоев бекона, соус барбекю. Подается с картофельными дольками, соусом и безалкогольным напитком. 950г</p>
+						</div>
+					</div>
+				</section>
+			</aside>
+		</div>
+	</main>
+	<footer class="container-fluid">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-4">
+					<div class="row">
+						<div class="icon">
+							<i class="fa fa-map-marker fa-lg"></i>
+						</div>
+						<p>Уфа, ул. Ленина, 44/46</p>
+					</div>
+					<div class="row">
+						<div class="icon"><i class="fa fa-clock-o fa-lg"></i></div>
+						<div class="divtime">
+							<p>Вс-Чт 13:00 до 24:00</p><br><p>Пт-Сб 13:00 до 01:00</p>
+						</div>
+					</div>
 				</div>
-			</div>
-			<div class="col">
-				<div class="row">
-					<i id="postinfotel"></i>
-					<p itemprop="telephone">+7 996 400 12 27</p>
+				<div class="col-sm-4 center">
+					<div class="row"><div class="icon"><i class="fa fa-phone fa-lg"></i></div><p>+7 996 400 12 27</p></div>
+					<div class="row"><div class="icon"><i class="fa fa-envelope-o fa-lg"></i></div><a href="mailto:thebullbar2017@gmail.com"><p>thebullbar2017@gmail.com</p></a></div>
 				</div>
-				<div class="row">
-					<i id="postinfomail"></i>
-					<a href="mailto:thebullbar2017@gmail.com">thebullbar2017@gmail.com</a>
-				</div>
-			</div>
-			<div class="col">
-				<div class="row">
-					<i id="postinfoshare"></i><p>Поддержи нас</p>
+				<div class="col-sm-4 right">
+					<i class="fa fa-bullhorn"></i><p>Поддержи нас</p>
 					<div class="ya-share2" data-services="vkontakte,facebook,odnoklassniki,gplus,twitter" data-counter=""></div>
 				</div>
-				<div class="row">
-					<div id="vk_subscribe"></div>
-				</div>
-				<div class="row">
-
-				</div>
 			</div>
 		</div>
-	</div>
+	</footer>
 </body>
 </html>
